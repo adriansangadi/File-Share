@@ -1,0 +1,75 @@
+{
+  "name": "TG File Share/Sharing Bot",
+  "description": "file sharing bot store posts and it can access by special links",
+  "keywords": [
+    "telegram",
+    "file",
+    "sharing"
+  ],
+  "repository": "https://t.me/eren_yeagerattacktitan",
+  "logo": "https://i.ibb.co/ZN4nYvx/Boa-Hancock-15-min.jpg",
+  "env": {
+    "TG_BOT_TOKEN": {
+      "description": "Your Bot token, Get it from @Botfather",
+      "value": "6599715582:AAE2FEiPd7iAKuSqmaQL5OBg4NiiO5tbSDQ"
+    },
+    "OWNER_ID": {
+      "description": "An integer of consisting of your owner ID",
+      "value": "1983471689"
+    },
+    "APP_ID":{
+      "description": "your app id, take it from my.telegram.org",
+      "value": "29722120"
+    },
+    "DATABASE_URL": {
+      "description": "Paste your mongo db url",
+      "value": "mongodb+srv://helloyeager8:dSaini9485@cluster0.bhqp2fq.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp"
+    },
+    "DATABASE_NAME":{
+      "description": "Enter your DATABASE_NAME ",
+      "value": "boa-file-bot"
+    },
+    "API_HASH":{
+      "description": "your api hash, take it from my.telegram.org",
+      "value": "91f3bf8651edfa748856cfcad07f55bb"
+    },
+    "CHANNEL_ID":{
+      "description": "make a channel (database channel), then make the bot as admin in channel, and it's id",
+      "value": "-1001557553387"
+    },
+    "FORCE_SUB_CHANNEL":{
+      "description": "id of the channel or group, if you want enable force sub feature else put 0",
+      "value": "-1001635247720"
+    },
+    "START_MESSAGE": {
+      "description": "Optional: start message of bot, use HTML parsemode format",
+      "value": "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link."
+    },
+    "FORCE_SUB_MESSAGE": {
+      "description": "Optional: Force Sub message of bot, use HTML parsemode format",
+      "value": "Hello {first}\n\n<b>You need to join in my Channel/Group to use me\n\nKindly Please join Channel</b>"
+    },
+    "ADMINS": {
+      "description": "A space separated list of user_ids of Admins, they can only create links",
+      "value": "",
+      "required": false
+    },
+    "PROTECT_CONTENT": {
+      "description": "Protect contents from getting forwarded",
+      "value": "True",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
+
